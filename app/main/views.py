@@ -82,7 +82,7 @@ def sports():
         health=health, science=science, sports=sports, technology=technology,bbc_news=bbc_news,techcrunch=techcrunch,business_insider=business_insider
         ,abc_news=abc_news,al_jazeera_english=al_jazeera_english,cnn=cnn)
 
-@main.route('/tech')
+@main.route('/technology')
 def tech():
 
     headlines = get_headline()
@@ -104,11 +104,11 @@ def tech():
     if search_input:
         return redirect(url_for('search_specific_country',country_name=search_input))
     else:
-        return render_template('tech.html',headlines =headlines, business=business, entertainment=entertainment, general=general,
+        return render_template('technology.html',headlines =headlines, business=business, entertainment=entertainment, general=general,
         health=health, science=science, sports=sports, technology=technology,bbc_news=bbc_news,techcrunch=techcrunch,business_insider=business_insider
         ,abc_news=abc_news,al_jazeera_english=al_jazeera_english,cnn=cnn)
 
-@main.route('/ent')
+@main.route('/entertainment')
 def ent():
 
     headlines = get_headline()
@@ -130,7 +130,7 @@ def ent():
     if search_input:
         return redirect(url_for('search_specific_country',country_name=search_input))
     else:
-        return render_template('ent.html',headlines =headlines, business=business, entertainment=entertainment, general=general,
+        return render_template('entertainment.html',headlines =headlines, business=business, entertainment=entertainment, general=general,
         health=health, science=science, sports=sports, technology=technology,bbc_news=bbc_news,techcrunch=techcrunch,business_insider=business_insider
         ,abc_news=abc_news,al_jazeera_english=al_jazeera_english,cnn=cnn)
 

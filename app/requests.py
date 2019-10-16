@@ -1,7 +1,6 @@
 from app import app
 from .models import Headline
-import urllib.request
-import json
+import urllib.request,json
 
 api_key = '20a98572906549068e62aa8506a086c3'
 
@@ -9,20 +8,14 @@ base_url = "https://newsapi.org/v2/top-headlines?country=us&apiKey={}"
 
 
 def process_results(headlines_list):
-    """
-    Converts the headline result into a list of objects
-    Args:
-        headlines_list: A list of dictionaries taht contain article details
-    Returns:
-        headline_results: A list of article objects
-    """
+   
 
     headline_results = []
 
-    for Article_item in headlines_list:
-        Title = article_item.get('title')
+    for article_item in headlines_list:
+        title = article_item.get('title')
         description = article_item.get('description')
-        Content = article_item.get('content')
+        content = article_item.get('content')
         urlToImage = article_item.get('urlToImage')
         url = article_item.get('url')
         category = article_item.get('category')
@@ -37,9 +30,7 @@ def process_results(headlines_list):
 
 
 def get_headline():
-    """
-    function to get json responce to our url request
-    """
+    
     get_headline_url = base_url.format(api_key)
 
     with urllib.request.urlopen(get_headline_url) as url:
@@ -92,23 +83,6 @@ def get_business_category():
     return business_category_results
 
 
-def get_sports_category():
-
-    sports_url = 'https://newsapi.org/v2/top-headlines?category=sports&apiKey={}'.format(
-        api_key)
-
-    with urllib.request.urlopen(sports_url) as url:
-        sports_category_data = url.read()
-        sports_category_response = json.loads(sports_category_data)
-
-        sports_category_results = None
-
-        if sports_category_response['articles']:
-            sports_category_list = sports_category_response['articles']
-            sports_category_results = process_results(sports_category_list)
-
-    return sports_category_results
-
 
 def get_entertainment_category():
 
@@ -128,6 +102,27 @@ def get_entertainment_category():
                 entertainment_category_list)
 
     return entertainment_category_results
+
+
+def get_sports_category():
+
+    sports_url = 'https://newsapi.org/v2/top-headlines?category=sports&apiKey={}'.format(
+        api_key)
+
+    with urllib.request.urlopen(sports_url) as url:
+        sports_category_data = url.read()
+        sports_category_response = json.loads(sports_category_data)
+
+        sports_category_results = None
+
+        if sports_category_response['articles']:
+            sports_category_list = sports_category_response['articles']
+            sports_category_results = process_results(sports_category_list)
+
+    return sports_category_results
+
+
+
 
 
 def get_general_category():

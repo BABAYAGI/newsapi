@@ -15,8 +15,8 @@
         <div class="row">
 
             {%for headline in entertainment %}
-            <div class="col-md-3">
-                <div class="card black darken-3">
+            <div class="col-md-4">
+                <div class="card yellow darken-3">
                     <div class="view overlay">
                         <img class="card-img-top" height="200px" src="{{headline.urlToImage}}" alt="story image"
                             onerror="this.onerror=null;this.src='http://www.nlpca.co.uk/blog/wp-content/uploads/2015/03/entertainment_news_stopimage.jpg';">
@@ -41,5 +41,4 @@
 </body>
 {% endblock %}
 {% block footer %}
-{% include 'movie.html' %}
 {% endblock %}
