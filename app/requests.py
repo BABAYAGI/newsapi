@@ -1,13 +1,10 @@
 from app import app
+from .models import Headline
 import urllib.request
 import json
-from .models import Headline
 
+api_key = '20a98572906549068e62aa8506a086c3'
 
-# Getting api key
-api_key = '6aa62039e9ec4621ac8d28a5956cb10c'
-
-# Getting the movie base url
 base_url = "https://newsapi.org/v2/top-headlines?country=us&apiKey={}"
 
 
@@ -22,10 +19,10 @@ def process_results(headlines_list):
 
     headline_results = []
 
-    for article_item in headlines_list:
-        title = article_item.get('title')
+    for Article_item in headlines_list:
+        Title = article_item.get('title')
         description = article_item.get('description')
-        content = article_item.get('content')
+        Content = article_item.get('content')
         urlToImage = article_item.get('urlToImage')
         url = article_item.get('url')
         category = article_item.get('category')
