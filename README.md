@@ -33,13 +33,13 @@ Github account [https://github.com/BABAYAGI/](https://github.com/BABAYAGI/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/BABAYAGI/newsip3.git>)
+1. Fork it (<https://github.com/BABAYAGI/newsapi.git>)
 2. Create your feature branch (`git checkout -b feature/master`)
 3. Commit your changes (`git commit -m 'yourname:'`)
-4. Push to the branch (`git push origin master`)
+4. git remote add origin https://github.com/BABAYAGI/newsapi.git
 5. Create a new Pull Request
+6. git push -u origin master
 
-<!-- Markdown link & img dfn's -->
 
 [npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
 
