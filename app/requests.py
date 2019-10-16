@@ -222,5 +222,3 @@ def get_newsid(id):
 
     return news_category_results
 
-
-# newsapi = NewsApiClient(NEWS_API_KEY)
