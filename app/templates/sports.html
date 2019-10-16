@@ -3,7 +3,7 @@
 <body class="bg-blue">
     
 <div class="container-fluid">
-    <div style="text-align: center; color:rgba(21, 255, 0, 0.815); padding: 4px;">
+    <div style="text-align: center; color:rgba(33, 240, 14, 0.699); padding: 4px; font-size: 40px;font-weight: 1000px  ">
         <h2>SPORTS NEWS</h2>
     </div>
 
@@ -15,7 +15,7 @@
 
         {%for headline in sports %}
         <div class="col-md-4">
-            <div class="card yellow darken-3">
+            <div class="card p-3 mb-2 bg-primary text-white">
                 <div class="view overlay">
                     <img class="card-img-top" height="200px" src="{{headline.urlToImage}}" alt="story image"
                         onerror="this.onerror=null;this.src='http://edikanforadio.com/wp-content/uploads/2013/07/stock-footage-sport-news-text-in-monitors-room-loop.jpg';">
@@ -23,7 +23,7 @@
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
-                <div class="card-body elegant-color white-text rounded-bottom">
+                <div class="card-body p-3 mb-2 bg-success text-white">
                     <a class="activator waves-effect mr-4" href="{{headline.url}}"><i class="fas fa-info-circle white-text"></i></a>
                     <hr class="hr-light">
                     <p class="card-text white-text mb-4">{{headline.title  | truncate(200)}}</p>

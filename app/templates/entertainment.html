@@ -16,7 +16,7 @@
 
             {%for headline in entertainment %}
             <div class="col-md-4">
-                <div class="card yellow darken-3">
+                <div class="card p-3 mb-2 bg-primary text-white">
                     <div class="view overlay">
                         <img class="card-img-top" height="200px" src="{{headline.urlToImage}}" alt="story image"
                             onerror="this.onerror=null;this.src='http://www.nlpca.co.uk/blog/wp-content/uploads/2015/03/entertainment_news_stopimage.jpg';">
@@ -24,7 +24,7 @@
                             <div class="mask rgba-white-slight"></div>
                         </a>
                     </div>
-                    <div class="card-body elegant-color white-text rounded-bottom">
+                    <div class="card-body p-3 mb-2 bg-success text-white">
                         <a class="activator waves-effect mr-4" href="{{headline.url}}"><i class="fas fa-info-circle white-text"></i></a>
                         <h4 class="card-title">{{headline.name}}</h4>
                         <hr class="hr-light">
