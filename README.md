@@ -25,6 +25,18 @@ you need install python and run the program in terminal
 * javascript
 * awesome & google fonts
 
+## Featires 
+
+* As a user can see various news sources on the homepage of the application.
+
+* As a user can select a news source and see all news articles from the selected news source in the application.
+
+* As a user can see the image, description and the time a news article was created.
+
+* As a user can click on an article and read the full article on the source website.
+
+
+
 ## Meta
 
 Darsan Hirani – [@darsan_hirani@hotmail.com](https://twitter.com/darsan_hirani) / darsanh907@gmail.com
